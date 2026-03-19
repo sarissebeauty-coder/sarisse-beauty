@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sarissebeauty</title>
     <style>
-        /* --- Estilos Generales --- */
         body {
             font-family: 'Georgia', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
@@ -14,17 +13,13 @@
             color: #333;
         }
 
-        /* --- Estilos del Encabezado (Header) --- */
         header {
-            /* IMPORTANTE: Imagen de Fondo */
-            /* Reemplaza la URL de abajo con la imagen real de tu escuela */
             background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
                               url('bannerform.jpg'); 
-            
-            background-size: cover; /* La imagen cubre todo el espacio */
-            background-position: center; /* Centrar la imagen */
+            background-size: cover;
+            background-position: center;
             color: white;
-            padding: 100px 20px; /* Espaciado arriba y abajo */
+            padding: 100px 20px;
             text-align: center;
         }
 
@@ -33,27 +28,24 @@
             font-size: 3em;
             text-transform: uppercase;
             letter-spacing: 2px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Sombra para que se lea mejor el texto */
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
 
-        /* --- Estilos del Contenedor Principal --- */
         .container {
-            max-width: 600px; /* Ancho máximo del formulario */
-            margin: -50px auto 50px; /* Levanta el formulario sobre el encabezado */
+            max-width: 600px;
+            margin: -50px auto 50px;
             background: rgb(228, 217, 217);
             padding: 40px;
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            position: relative; /* Necesario para el margin-top negativo */
         }
 
         h2 {
             text-align: center;
-            color: #8496aa; /* Color institucional (ejemplo) */
+            color: #8496aa;
             margin-bottom: 30px;
         }
 
-        /* --- Estilos del Formulario --- */
         .form-group {
             margin-bottom: 20px;
         }
@@ -65,31 +57,20 @@
             color: #555;
         }
 
-        input[type="text"],
-        input[type="tel"],
-        input[type="email"],
-        textarea {
+        input, textarea {
             width: 100%;
             padding: 12px;
             border: 1px solid #ddd;
             border-radius: 4px;
-            box-sizing: border-box; /* Importante para que el padding no afecte el ancho */
+            box-sizing: border-box;
             font-size: 16px;
         }
 
-        input:focus,
-        textarea:focus {
+        input:focus, textarea:focus {
             border-color: #000000;
             outline: none;
-            box-shadow: 0 0 5px rgba(0, 74, 153, 0.2);
         }
 
-        /* Tres renglones para sugerencias */
-        textarea {
-            resize: vertical; /* Permite al usuario estirarlo solo hacia abajo */
-        }
-
-        /* Estilos del Botón --- */
         .btn-enviar {
             background-color: rgb(200, 236, 224);
             color: rgb(0, 0, 0);
@@ -111,39 +92,42 @@
 </head>
 <body>
 
-    <header>
-        <h1>Sarisse</h1>
-    </header>
+<header>
+    <h1>Sarisse</h1>
+</header>
 
-    <div class="container">
-        <h2><marquee>Registrate</marquee></h2>
+<div class="container">
+    <h2><marquee>Registrate</marquee></h2>
+    
+    <form action="https://formspree.io/f/TU_ID_DE_FORMSPREE" method="POST">
         
-        <form action="https://formspree.io/f/TU_ID_DE_FORMSPREE" method="POST">
-            
-            <div class="form-group">
-                <label for="nombre">Nombre Completo:</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Ej. Denisse Osalde" required>
-            </div>
+        <!--  REDIRECCIÓN -->
+        <input type="hidden" name="_redirect" value="index.html">
 
-            <div class="form-group">
-                <label for="telefono">Teléfono:</label>
-                <input type="tel" id="telefono" name="telefono" placeholder="Ej. 9841304135" required>
-            </div>
+        <div class="form-group">
+            <label>Nombre Completo:</label>
+            <input type="text" name="nombre" required>
+        </div>
 
-            <div class="form-group">
-                <label for="correo">Correo Electrónico:</label>
-                <input type="email" id="correo" name="correo" placeholder="Ej. sarita7@gmail.com" required>
-            </div>
+        <div class="form-group">
+            <label>Teléfono:</label>
+            <input type="tel" name="telefono" required>
+        </div>
 
-            <div class="form-group">
-                <label for="sugerencias">Sugerencias o Comentarios:</label>
-                <textarea id="sugerencias" name="sugerencias" rows="3" placeholder="Escribe aquí tus sugerencias..." required></textarea>
-            </div>
+        <div class="form-group">
+            <label>Correo Electrónico:</label>
+            <input type="email" name="correo" required>
+        </div>
 
-            <button type="submit" class="btn-enviar">Enviar Datos</button>
+        <div class="form-group">
+            <label>Sugerencias o Comentarios:</label>
+            <textarea name="sugerencias" rows="3" required></textarea>
+        </div>
 
-        </form>
-    </div>
+        <button type="submit" class="btn-enviar">Enviar Datos</button>
+
+    </form>
+</div>
 
 </body>
 </html>
