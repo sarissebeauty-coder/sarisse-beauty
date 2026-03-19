@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="es"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>tratamientos</title>
+<link rel="icon" type="Image/jpeg" href="icono pag .jpeg">
+
+<style>
+
+header{
+    background-image:url("C:\\Users\\Sara\\Desktop\\sarisse/WhatsApp Image 2026-03-09 at 9.05.26 AM.jpeg");
+    background-size:cover;
+    background-position: center;
+    color:black;
+    text-align:center;
+    padding: 40px 40px;
+    font-family: Broadway;
+}
+
+nav{
+    background-color: powderblue;
+    text-align: center;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: inline-block;
+}
+
+nav a:hover{
+    background-color: plum;
+    color: black;
+}
+
+.dropdown{
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: gray;
+}
+
+.dropdown-content a{
+    display: block;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+/* PRODUCTOS */
+.productos{
+    padding:40px;
+    text-align:center;
+}
+
+.productos h2{
+    font-size:40px;
+    color:#efd9b7;
+}
+
+.galeria{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:15px;
+    border-radius:15px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:scale(1.05);
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    border-radius:12px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>SARISSE</h1>
+    <h3>Crea, Deslumbra, Conquista</h3>
+</header>
+
+<nav>
+    <div class="dropdown">
+        <a href="index.html">Inicio</a>
+    </div>
+
+    <div class="dropdown">
+        <a href="#">Maquillaje</a>
+        <div class="dropdown-content">
+            <a href="#">Bases</a>
+            <a href="#">Correctores</a>
+            <a href="#">Labiales</a>
+            <a href="#">Rubores</a>
+            <a href="#">Sombras</a>
+            <a href="#">Contornos</a>
+            <a href="#">Brochas</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <a href="#">Tratamientos</a>
+        <div class="dropdown-content">
+            <a href="skincare 3.html">Skincare</a>
+            <a href="cabello.html">Cabello</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <a href="#">Reseñas</a>
+        <a href="#">Información</a>
+    </div>
+</nav>
+
+<main>
+<section class="productos">
+
+    <div class="galeria"> 
+
+        <div class="card">
+            <img src="loreal.jpeg">
+            <p>enchinador de pestañas shiseido</p>
+            <p>$699.00 MX</p>
+        </div>
+
+        <div class="card">
+            <img src="skin pons.jpeg">
+            <p>set de una tinta, rimel y gel de cejas yuya</p>
+            <p>$349.00 MX</p>
+        </div>
+
+        <div class="card">
+            <img src="skin elf.jpeg">
+            <p>set mini rubores líquidos rare beauty</p>
+            <p>$429.00 MX</p>
+        </div>
+
+        <div class="card">
+            <img src="cerave.jpeg">
+            <p>tratamiento garnier sandía</p>
+            <p>$270.00 MX</p>
+        </div>
+
+        <div class="card">
+            <img src="mascarilla rosas garnier.jpeg">
+            <p>máscara de pestañas sky-high</p>
+            <p>$150.00 MX</p>
+        </div>
+
+        <div class="card">
+            <img src="vitamina c.jpeg">
+            <p>kit vitamina c garnier</p>
+            <p>$430.00 MX</p>
+        </div>
+
+        <div class="card">
+            <img src="antiacne.jpeg">
+            <p>rubor en crema PATRICK TA</p>
+            <p>$510.00 MX</p>
+        </div>
+
+        <div class="card">
+            <img src="la roshey.jpeg">
+            <p>set de cabello YUYA</p>
+            <p>$470.00 MX</p>
+        </div>
+
+        <div class="card">
+            <img src="mascarilla ojos garnier.jpeg">
+            <p>gloss stain con color NYX</p>
+            <p>$90.00 MX</p>
+        </div>
+
+    </div>
+
+</section>
+</main>
+
+</body>
+</html>

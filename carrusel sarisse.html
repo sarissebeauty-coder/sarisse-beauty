@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrusel CSS </title>
+    <style>
+        /* Estilos Base */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+
+        .carousel-wrapper {
+            width: 90%;
+            max-width: 900px;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            background: #fff;
+            position: relative;
+        }
+
+        /* Ocultar Radio Buttons */
+        input[name="nav"] {
+            display: none;
+        }
+
+        /* Contenedor de las Diapositivas */
+        .slides-container {
+            display: flex;
+            width: 500%; /* 100% por cada una de las 5 imágenes */
+            transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+        }
+
+        .slide {
+            width: 20%; /* 1/5 del total */
+            position: relative;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Lógica de Navegación (Desplazamiento) */
+        #img1:checked ~ .slides-container { transform: translateX(0); }
+        #img2:checked ~ .slides-container { transform: translateX(-20%); }
+        #img3:checked ~ .slides-container { transform: translateX(-40%); }
+        #img4:checked ~ .slides-container { transform: translateX(-60%); }
+        #img5:checked ~ .slides-container { transform: translateX(-80%); }
+
+        /* Controles (Puntos de navegación) */
+        .navigation-dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+        }
+
+        .dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            border: 2px solid yellow;
+            transition: 0.3s;
+        }
+
+        .dot:hover {
+            background-color: #fff;
+        }
+
+        /* Indicador de Punto Activo */
+        #img1:checked ~ .navigation-dots label[for="img1"],
+        #img2:checked ~ .navigation-dots label[for="img2"],
+        #img3:checked ~ .navigation-dots label[for="img3"],
+        #img4:checked ~ .navigation-dots label[for="img4"],
+        #img5:checked ~ .navigation-dots label[for="img5"] {
+            background-color: #fff;
+            transform: scale(1.3);
+        }
+
+        /* Texto opcional sobre la imagen */
+        .caption {
+            position: absolute;
+            bottom: 50px;
+            left: 30px;
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="carousel-wrapper">
+        <input type="radio" name="nav" id="img1" checked>
+        <input type="radio" name="nav" id="img2">
+        <input type="radio" name="nav" id="img3">
+        <input type="radio" name="nav" id="img4">
+        <input type="radio" name="nav" id="img5">
+        <input type="radio" name="nav" id="img6">
+        <input type="radio" name="nav" id="img7">
+        <input type="radio" name="nav" id="img8">
+        <input type="radio" name="nav" id="img9">
+
+        <div class="slides-container">
+            <div class="slide">
+                <img src="shiseido.jpeg" alt="Imagen 1">
+                <p>enchinador de pestañas shiseido</p>
+                <br>
+                <p>$699.00 MX</p>
+            </div>
+            <div class="slide">
+                <img src="yuya 3 labiales.jpeg" alt="Imagen 2">
+                <p>set de una tinta, rimel y gel de cejas yuya</p>
+                <br>
+                <p>$349.00 MX</p>
+            </div>
+            <div class="slide">
+                <img src="rarebeauty.jpeg" alt="Imagen 3">
+                <p>set mini rubores liquidos rare beauty</p>
+                <br>
+                <p>$429.00 MX</p>
+            </div>
+            <div class="slide">
+                <img src="sandia.jpeg" alt="Imagen 4">
+                <p>tratamiento garnier sandía</p>
+                <p>acondicionador,shampoo y mascarilla</p>
+                <br>
+                <p>$270.00 MX</p>
+            </div>
+            <div class="slide">
+                <img src="sky hight.jpeg" alt="Imagen 5">
+                <p>mascara de pestañas waterproof </p>
+                <p> sky-hight maybelline </p>
+                <BR>
+                <P>$150.00 MX</P>
+            </div>
+            <div class="slide">
+                <img src="vitamina c.jpeg" alt="Imagen 6">
+                <p>kit vitamina c acalara garnier</p>
+                <p>serum, hidratante, limpiador, jabon</p>
+                <br>
+                <p>$430.00 MX</p>
+            </div>
+            <div class="slide">
+                <img src="patrick ta.jpeg" alt="Imagen 7">
+                <p>rubor en crema y polvo PATRICK TA</p>
+                <BR>
+                <P>$510.00 MX</P>
+            </div>
+            <div class="slide">
+                <img src="set cabello yuya.jpeg" alt="Imagen 8">
+                <P>set de cabello YUYA</P>
+                <p>shampoo,acondicionador,mascarilla</p>
+                <BR>
+                <P>$470.00 MX</P>
+            </div>
+            <div class="slide">
+                <img src="labial nix.jpeg" alt="Imagen 9">
+                <P>gloss stain con color NIX</P>
+                <BR>
+                <P>$90.00 MX</P>
+            </div>
+        </div>
+
+        <div class="navigation-dots">
+            <label for="img1" class="dot"></label>
+            <label for="img2" class="dot"></label>
+            <label for="img3" class="dot"></label>
+            <label for="img4" class="dot"></label>
+            <label for="img5" class="dot"></label>
+            <label for="img6" class="dot"></label>
+            <label for="img7" class="dot"></label>
+            <label for="img8" class="dot"></label>
+            <label for="img9" class="dot"></label>
+        </div>
+    </div>
+
+</body>
+</html>
