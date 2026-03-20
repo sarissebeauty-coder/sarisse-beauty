@@ -6,32 +6,33 @@
         <link rel="icon" type="Image/jpeg" href="icono pag .jpeg">
 
     <style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: linear-gradient(to right, #eef2f3, #dfe9f3);
+<style>
+
+header{
+    background-image:url("fondo.jpeg");
+    background-size:cover;
+    background-position: center;
+    color:black;
+    text-align:center;
+    padding: 40px 40px;
+    font-family: Broadway;
 }
 
-nav{ /* Barra de navegación */
-    background-color: powderblue; /* Fondo negro */
-    text-align: center; /* coloca a  la Izquierda los enlaces */
-
-    position: fixed;   /* hace que se quede arriba */
-    top: 0;
-    width: 100%;
-    z-index: 1000;
+nav{
+    background-color: powderblue;
+    text-align: center;
 }
 
-nav a{ /* Estilo de los enlaces del menú */
-    color: white; /* Color del texto */
-    text-decoration: none; /* Quita el subrayado */
-    padding: 15px; /* Espacio interno */
-    display: inline-block; /* Permite aplicar padding correctamente */
+nav a{
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: inline-block;
 }
 
-nav a:hover{ /* Cuando pasamos el mouse */
-    background-color: plum; /* Cambia fondo */
-    color: black; /* Cambia color del texto */
+nav a:hover{
+    background-color: plum;
+    color: black;
 }
 
 .dropdown{
@@ -53,204 +54,160 @@ nav a:hover{ /* Cuando pasamos el mouse */
     display: block;
 }
 
-.contenedor {
-padding: 20px;
+/* PRODUCTOS */
+.productos{
+    padding:40px;
+    text-align:center;
 }
 
-        .galeria {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 20px;
-        }
+.productos h2{
+    font-size:40px;
+    color:#efd9b7;
+}
 
-        .item {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: aparecer 0.6s forwards;
-        }
+.galeria{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
+    gap:25px;
+}
 
-        .item:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 18px rgba(0,0,0,0.2);
-        }
+.card{
+    background:white;
+    padding:15px;
+    border-radius:15px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
 
-        .item img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            transition: transform 0.3s;
-        }
+.card:hover{
+    transform:scale(1.05);
+}
 
-        .item:hover img {
-            transform: scale(1.05);
-        }
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    border-radius:12px;
+}
 
-        .descripcion {
-            padding: 10px;
-            font-size: 14px;
-        }
-
-        .boton {
-            margin: 10px;
-            padding: 8px 15px;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            border-radius: 20px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .boton:hover {
-            background-color: #0056b3;
-            transform: scale(1.1);
-        }
-
-        @keyframes aparecer {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .item:nth-child(1){animation-delay:0.1s;}
-        .item:nth-child(2){animation-delay:0.2s;}
-        .item:nth-child(3){animation-delay:0.3s;}
-        .item:nth-child(4){animation-delay:0.4s;}
-        .item:nth-child(5){animation-delay:0.5s;}
-        .item:nth-child(6){animation-delay:0.6s;}
-        .item:nth-child(7){animation-delay:0.7s;}
-        .item:nth-child(8){animation-delay:0.8s;}
-        .item:nth-child(9){animation-delay:0.9s;}
-        .item:nth-child(10){animation-delay:1s;}
-        .item:nth-child(11){animation-delay:1.1s;}
-        .item:nth-child(12){animation-delay:1.2s;}
-    </style>
+</style>
 </head>
+
 <body>
 
-    <header>
-        <nav> <!-- Menú de navegación -->
-            <div class="dropdown">
-                <a href="index.html">Inicio</a>
-            </div>
+<header>
+    <h1>SARISSE</h1>
+    <h3>Crea, Deslumbra, Conquista</h3>
+</header>
 
-            <div class="dropdown">
-
-                <a href="#">Maquillaje</a>
-
-                <div class="dropdown-content">
-                    <a href="bases.html">Bases</a>
-                    <a href="correctores.html">Correctores</a>
-                    <a href="Labiales.html">Labiales</a>
-                    <a href="Rubores.html">Rubores</a>
-                    <a href="Sombras.html">Sombras</a>
-                    <a href="Contornos.html">Contornos</a>
-                    <a href="Iluminadores.html">Iluminadores</a>
-                </div>
-            </div>
- 
-            <div class="dropdown">
-                    <a href="#">tratamientos</a>
-                <div class="dropdown-content">
-                    <a href="skincare 3.html">skincare</a>
-                    <a href="cabello.html">Cabello</a>
-                </div>
-            </div>
-            
-            <div class="dropdown">
-                <a href="#">reseñas</a>
-                <a href="#">informacion</a>
-            </div>
-    
-        </nav>
-    </header>
-    
-    <BR><BR><BR><BR><BR>
-    <BR><BR><BR><BR><BR><BR>
-    <div class="contenedor">
-    <div class="galeria">
-
-        <div class="item">
-            <img src="ESTEE LAUDER.jpeg">
-        <div class="descripcion">Estée Lauder Double Wear - Alta cobertura y larga duración</div>
-        <button class="boton" onclick="alert('Te gustó esta base')">Me gusta</button>
+<nav>
+    <div class="dropdown">
+        <a href="index.html">Inicio</a>
     </div>
 
-    <div class="item">
-<img src="FENTY BEAUTY.jpeg">
-<div class="descripcion">Fenty Beauty Pro Filt'r - Acabado mate natural (gama alta)</div>
-<button class="boton">Me gusta</button>
-</div>
+    <div class="dropdown">
+        <a href="#">Maquillaje</a>
+        <div class="dropdown-content">
+            <a href="bases.html">Bases</a>
+            <a href="correctores.html">Correctores</a>
+            <a href="labiales.html">Labiales</a>
+            <a href="rubores.html">Rubores</a>
+            <a href="sombras.html">Sombras</a>
+            <a href="contornos.html">Contornos</a>
+            <a href="iluminadores.html">Iluminadores</a>
+        </div>
+    </div>
 
-<div class="item">
-    <img src="NARS.jpeg">
-        <div class="descripcion">NARS Natural Radiant - Efecto luminoso (gama alta)</div>
-        <button class="boton">Me gusta</button>
-</div>
+    <div class="dropdown">
+        <a href="#">Tratamientos</a>
+        <div class="dropdown-content">
+            <a href="skincare 3.html">Skincare</a>
+            <a href="cabello.html">Cabello</a>
+        </div>
+    </div>
 
-<div class="item">
-    <img src="MAC.jpeg">
-        <div class="descripcion">MAC Studio Fix Fluid - Cobertura media-alta (gama alta)</div>
-        <button class="boton">Me gusta</button>
-</div>
+    <div class="dropdown">
+        <a href="reseñas.html">Reseñas</a>
+        <a href="historia 2.html">Información</a>
+    </div>
+</nav>
 
-<div class="item">
-    <img src="DIOR.jpeg">
-        <div class="descripcion">Dior Backstage Face & Body - Ligera y natural (gama alta)</div>
-        <button class="boton">Me gusta</button>
-</div>
+<main>
+<section class="productos">
 
-<div class="item">
-    <img src="FIT ME.jpeg">
-        <div class="descripcion">Maybelline Fit Me - Acabado natural (gama media)</div>
-        <button class="boton">Me gusta</button>
-</div>
+    <div class="galeria"> 
 
-<div class="item">
-    <img src="INFALIBLE.jpeg">
-        <div class="descripcion">L'Oréal Infallible 24h - Larga duración (gama media)</div>
-        <button class="boton">Me gusta</button>
-</div>
+        <div class="card">
+            <img src="DIOR.jpeg">
+            <p>Dior Backstage Face & Body - Ligera y natural </p>
+            <p>$699.00 MX</p>
+        </div>
 
-<div class="item">
-    <img src="REVLON.jpeg">
-        <div class="descripcion">Revlon ColorStay - Control de grasa (gama media)</div>
-        <button class="boton">Me gusta</button>
-</div>
+        <div class="card">
+            <img src="ESTEE LAUDER.jpeg">
+            <p>Estée Lauder Double Wear - Alta cobertura y larga duración</p>
+            <p>$349.00 MX</p>
+        </div>
 
-<div class="item">
-    <img src="NIX BASE.jpeg">
-        <div class="descripcion">NYX Can't Stop Won't Stop - Alta cobertura (gama media)</div>
-        <button class="boton">Me gusta</button>
-</div>
+        <div class="card">
+            <img src="FENTY BEAUTY.jpeg">
+            <p>Fenty Beauty Pro Filt'r - Acabado mate natural</p>
+            <p>$429.00 MX</p>
+        </div>
 
-<div class="item">
-    <img src="WET & WILD.jpeg">
-        <div class="descripcion">Wet n Wild Photo Focus - Económica y efectiva (gama media)</div>
-        <button class="boton">Me gusta</button>
-</div>
+        <div class="card">
+            <img src="NARS.jpeg">
+            <p>NARS Natural Radiant - Efecto luminoso </p>
+            <p>$270.00 MX</p>
+        </div>
 
-<div class="item">
-    <img src="TOO FACED.jpeg">
-        <div class="descripcion">Too Faced Born This Way - Acabado natural (gama alta)</div>
-        <button class="boton">Me gusta</button>
-</div>
+        <div class="card">
+            <img src="FIT ME.jpeg">
+            <p>Maybelline Fit Me - Acabado natural</p>
+            <p>$150.00 MX</p>
+        </div>
 
-<div class="item">
-    <img src="HUDA BEAUTY.jpeg">
-        <div class="descripcion">Huda Beauty Faux Filter - Cobertura completa (gama alta)</div>
-        <button class="boton">Me gusta</button>
-</div>
+        <div class="card">
+            <img src="REVLON.jpeg">
+            <p>Revlon ColorStay - Control de grasa </p>
+            <p>$430.00 MX</p>
+        </div>
 
-</div>
-</div>
+        <div class="card">
+            <img src="INFALIBLE.jpeg">
+            <p>L'Oréal Infallible 24h - Larga duración </p>
+            <p>$510.00 MX</p>
+        </div>
+
+        <div class="card">
+            <img src="WET & WILD.jpeg">
+            <p>Wet n Wild Photo Focus - Económica y efectiva</p>
+            <p>$470.00 MX</p>
+        </div>
+
+        <div class="card">
+            <img src="NIX BASE.jpeg">
+            <p>NYX Can't Stop Won't Stop - Alta cobertura</p>
+            <p>$90.00 MX</p>
+        </div>
+
+        <div class="card">
+            <img src="TOO FACED.jpeg">
+            <p>Too Faced Born This Way - Acabado natural</p>
+            <p>$90.00 MX</p>
+        </div>
+
+         <div class="card">
+            <img src="HUDA BEAUTY.jpeg">
+            <p>Huda Beauty Faux Filter- cobertura</p>
+            <p>$90.00 MX</p>
+        </div>
+        
+    </div>
+
+</section>
+</main>
 
 </body>
 </html>
+        
