@@ -2,184 +2,219 @@
     <html lang="es">
         <head>
         <meta charset="UTF-8">
-            <title>Rubores</title>
+        <title>rubores</title>
+        <link rel="icon" type="Image/jpeg" href="icono pag .jpeg">
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: linear-gradient(to right, #eef2f3, #dfe9f3);
-        }
+<style>
 
-        h1 {
-            text-align: center;
-            padding: 20px;
-            background-color: #222;
-            color: white;
-            margin: 0;
-        }
+header{
+    background-image:url("fondo.jpeg");
+    background-size:cover;
+    background-position: center;
+    color:black;
+    text-align:center;
+    padding: 40px 40px;
+    font-family: Broadway;
+}
 
-        .contenedor {
-            padding: 20px;
-        }
+nav{
+    background-color: powderblue;
+    text-align: center;
+}
 
-        .galeria {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
+nav a{
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: inline-block;
+}
 
-        .item {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: aparecer 0.6s forwards;
-        }
+nav a:hover{
+    background-color: plum;
+    color: black;
+}
 
-        .item:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 18px rgba(0,0,0,0.2);
-        }
+.dropdown{
+    display: inline-block;
+    position: relative;
+}
 
-        .item img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            transition: transform 0.3s;
-        }
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: gray;
+}
 
-        .item:hover img {
-            transform: scale(1.05);
-        }
+.dropdown-content a{
+    display: block;
+}
 
-        .descripcion {
-            padding: 10px;
-            font-size: 14px;
-        }
+.dropdown:hover .dropdown-content{
+    display: block;
+}
 
-        .boton {
-            margin: 10px;
-            padding: 8px 15px;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            border-radius: 20px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
+/* PRODUCTOS */
+.productos{
+    padding:40px;
+    text-align:center;
+}
 
-        .boton:hover {
-            background-color: #0056b3;
-            transform: scale(1.1);
-        }
+.productos h2{
+    font-size:40px;
+    color:#efd9b7;
+}
 
-        @keyframes aparecer {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+.galeria{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
+    gap:25px;
+}
 
-        .item:nth-child(1){animation-delay:0.1s;}
-        .item:nth-child(2){animation-delay:0.2s;}
-        .item:nth-child(3){animation-delay:0.3s;}
-        .item:nth-child(4){animation-delay:0.4s;}
-        .item:nth-child(5){animation-delay:0.5s;}
-        .item:nth-child(6){animation-delay:0.6s;}
-        .item:nth-child(7){animation-delay:0.7s;}
-        .item:nth-child(8){animation-delay:0.8s;}
-        .item:nth-child(9){animation-delay:0.9s;}
-        .item:nth-child(10){animation-delay:1s;}
-        .item:nth-child(11){animation-delay:1.1s;}
-        .item:nth-child(12){animation-delay:1.2s;}
-    </style>
+.card{
+    background:white;
+    padding:15px;
+    border-radius:15px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:scale(1.05);
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    border-radius:12px;
+}
+
+</style>
 </head>
+
 <body>
 
-    <h1>Rubores</h1>
+<header>
+    <h1>SARISSE</h1>
+    <h3>Crea, Deslumbra, Conquista</h3>
+</header>
 
-    <div class="contenedor">
-    <div class="galeria">
-
-    <div class="item">
-    <img src="">
-        <div class="descripcion">Rare Beauty Soft Pinch Blush</div>
-        <button class="boton" onclick="alert('Te gustó esta base')">Me gusta</button>
+<nav>
+    <div class="dropdown">
+        <a href="index.html">Inicio</a>
     </div>
 
-    <div class="item">
-    <img src="">
-         <div class="descripcion">NARS Blush</div>
-        <button class="boton">Me gusta</button>
-</div>
+    <div class="dropdown">
+        <a href="#">Maquillaje</a>
+        <div class="dropdown-content">
+            <a href="bases.html">Bases</a>
+            <a href="correctores.html">Correctores</a>
+            <a href="labiales.html">Labiales</a>
+            <a href="rubores.html">Rubores</a>
+            <a href="sombras.html">Sombras</a>
+            <a href="contornos.html">Contornos</a>
+            <a href="iluminadores.html">Iluminadores</a>
+        </div>
+    </div>
 
-<div class="item">
-    <img src="">
-        <div class="descripcion">Dior Rosy Glow Blush</div>
-        <button class="boton">Me gusta</button>
-</div>
+    <div class="dropdown">
+        <a href="#">Tratamientos</a>
+        <div class="dropdown-content">
+            <a href="skincare 3.html">Skincare</a>
+            <a href="cabello.html">Cabello</a>
+        </div>
+    </div>
 
-<div class="item">
-    <img src="">
-        <div class="descripcion">Charlotte Tilbury Cheek to Chic </div>
-        <button class="boton">Me gusta</button>
-</div>
+    <div class="dropdown">
+        <a href="reseñas.html">Reseñas</a>
+        <a href="historia 2.html">Información</a>
+    </div>
+</nav>
 
-<div class="item">
-    <img src="">
-        <div class="descripcion">Benefit Benetin</div>
-        <button class="boton">Me gusta</button>
-</div>
+<main>
+<section class="productos">
 
-<div class="item">
-    <img src="">
-        <div class="descripcion">Milani Baked Blush</div>
-        <button class="boton">Me gusta</button>
-</div>
+    <div class="galeria"> 
 
-<div class="item">
-    <img src="">
-        <div class="descripcion">Maybelline Fit Me Blush</div>
-        <button class="boton">Me gusta</button>
-</div>
+        <div class="card">
+            <img src="rubor rare.jpeg">
+            <p> Rare Beauty Soft Pinch Blush </p>
+            <p>$699.00 MX</p>
+        </div>
 
-<div class="item">
-    <img src="">
-        <div class="descripcion">L’Oréal True Match Blush</div>
-        <button class="boton">Me gusta</button>
-</div>
+        <div class="card">
+            <img src="rubar nars.jpeg">
+            <p> NARS Blush </p>
+            <p>$349.00 MX</p>
+        </div>
 
-<div class="item">
-    <img src="">
-        <div class="descripcion">NYX Sweet Cheeks Blush</div>
-        <button class="boton">Me gusta</button>
-</div>
+        <div class="card">
+            <img src="rubor dior.jpeg">
+            <p> Dior Rosy Glow Blush </p>
+            <p>$429.00 MX</p>
+        </div>
 
-<div class="item">
-    <img src="">
-        <div class="descripcion">e.l.f. Putty Blush </div>
-        <button class="boton">Me gusta</button>
-</div>
+        <div class="card">
+            <img src="rubor charlote.jpeg">
+            <p> Charlotte Tilbury Cheek to Chic </p>
+            <p>$270.00 MX</p>
+        </div>
 
-<div class="item">
-    <img src="">
-        <div class="descripcion">e.l.f. Putty Blush </div>
-        <button class="boton">Me gusta</button>
-</div>
+        <div class="card">
+            <img src="benetint.jpeg">
+            <p> Benefit Benetint </p>
+            <p>$150.00 MX</p>
+        </div>
 
-<div class="item">
-    <img src="">
-        <div class="descripcion">Essence The Blush</div>
-        <button class="boton">Me gusta</button>
-</div>
+        <div class="card">
+            <img src="milani.jpeg">
+            <p> Milani Baked Blush </p>
+            <p>$430.00 MX</p>
+        </div>
 
-</div>
-</div>
+        <div class="card">
+            <img src="rubor maybelline.jpeg">
+            <p> Maybelline Fit Me Blush </p>
+            <p>$510.00 MX</p>
+        </div>
+
+        <div class="card">
+            <img src="rubor loreal.jpeg">
+            <p> L’Oréal True Match Blush </p>
+            <p>$470.00 MX</p>
+        </div>
+
+        <div class="card">
+            <img src="rubor nix.jpeg">
+            <p> NYX Sweet Cheeks Blush </p>
+            <p>$90.00 MX</p>
+        </div>
+
+        <div class="card">
+            <img src="rubor elf.jpeg">
+            <p> e.l.f. Putty Blush </p>
+            <p>$90.00 MX</p>
+        </div>
+
+         <div class="card">
+            <img src="rubor wet wild.jpeg">
+            <p> Wet n Wild Color Icon Blush </p>
+            <p>$90.00 MX</p>
+        </div>
+        
+    </div>
+
+        <div class="card">
+            <img src="rubor essence.jpeg">
+            <p> Essence The Blush  </p>
+            <p>$90.00 MX</p>
+        </div>
+        
+    </div>
+
+</section>
+</main>
 
 </body>
 </html>
